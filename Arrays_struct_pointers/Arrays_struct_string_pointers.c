@@ -32,4 +32,6 @@ int main() {
        printf(" size of s1: %zd\n", sizeof(s1));
        printf("size of s2: %zd\n", sizeof(s2));   // we will get the size of the pointer not the number of elemnts in the stack.
        /****************************************************************************************/
+
+       return 0;
 }
