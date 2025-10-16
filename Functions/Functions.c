@@ -27,8 +27,10 @@ Macros are usally checked by the compiler during the preprocessor phase of the p
 
 #define MAX 20
 #define print printf("ENTER A NUMBER FOR INCREMENTING!\n");
+#define print1 printf("ENTER BASE FIRST AND THEN HEIGHT FOR FINDING AREA\n");
 #define inc(x) x+2                               // function-like macro.
-
+#define area(base,height) 0.5*(base*height)     // function-like macro.
+#define min(x,y) ((x<y)? x:y)
 
 int Recursion(int n);
 
@@ -36,6 +38,7 @@ int main()
 {
 	int n = 0;
 	int a = 0;
+	int base,height,triangle = 0;
 	int factorial = 1;
 
 	printf("Enter a number");
@@ -43,6 +46,10 @@ int main()
 	scanf("%d", &n);
 	print
 	scanf("%d", &a);
+	print1
+	scanf("%d %d",&base,&height);
+
+
 	factorial = Recursion(n);
 
 	printf("The factorial for the number entered is : %d\n",factorial);
@@ -50,6 +57,15 @@ int main()
 	a = inc(a);                    //incrementing the number by 2 using a function-like macro.
 
 	printf("The inc(a) is : %d\n",a);
+
+	triangle = area(base,height);   // function-like macro.
+
+	printf("The area of triangle is %d\n",triangle);
+
+	int min_num = min(min(10,8),min(19,7));    //we can call a function like macro inside the same function like macro(i.e, as recursion)
+	printf("min_num: %d\n",min_num);
+
+
 
 	return 0;
 
