@@ -108,7 +108,8 @@ int main()
     printf("(%d,%d)\n",array[i].x,array[i].y);
   }
    
-   
+  
+  free(array);
    
 
 	return 0;
